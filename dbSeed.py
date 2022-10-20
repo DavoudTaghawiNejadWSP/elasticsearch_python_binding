@@ -20,10 +20,15 @@ def insert_time_series_data(index, data):
     client.bulk(body=bulkItems)
 
 
-t = time()
-time_series = generate_time_serieses()
-for _ in range(50):
-    insert_time_series_data("chart-data", time_series)
-print(f'time {time() - t}')
-dashboard_data = generate_dashboard_data()
-insert_time_series_data("dashboard-data", dashboard_data)
+def main():
+    t = time()
+    time_series = generate_time_serieses()
+    for _ in range(50):
+        insert_time_series_data("chart-data", time_series)
+    print(f'time {time() - t}')
+    dashboard_data = generate_dashboard_data()
+    insert_time_series_data("dashboard-data", dashboard_data)
+
+
+if __name__ == '__main__':
+    main()
