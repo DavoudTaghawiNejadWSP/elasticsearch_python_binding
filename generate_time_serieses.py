@@ -7,19 +7,8 @@ import numpy as np
 def generate_time_serieses():
     items = []
 
-    datasetids = list(range(50))
-
-    datasetids = [
-        "INVESTMENT",
-        "EXPORT",
-        "GDP",
-        "CONSUMPTION",
-        "UNEMPLOYMENT",
-        "HOUSEHOLD",
-        "HOUSEHOLD",
-        "GDP"
-    ]
-
+    datasetids = list(range(20))
+ 
     filters = ["Scenario 1", "Scenario 2",
                "Scenario 3", "Scenario 4", "Scenario 5"]
 
